@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-// this will later be the object to store our tables
+
 const tables = [
     {
         tablenumber: '1',
@@ -66,7 +66,7 @@ app.get ('/reserve', function(req, res){
 })
 
 app.get ('/tables', function(req, res){
-    // res.sendFile(path.join(__dirname, "viewtables.html"))
+    res.sendFile(path.join(__dirname, "table.html"))
     console.log('View tables');
 })
 
