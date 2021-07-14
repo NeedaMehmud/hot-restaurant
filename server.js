@@ -4,7 +4,53 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 // this will later be the object to store our tables
-const tables =[];
+const tables = [
+    {
+        tablenumber: '1',
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '1',    
+    },
+    {
+        tablenumber: '2',
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '2',  
+    },
+    {   
+        tablenumber: '3',
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '3',  
+    },
+    {
+        tablenumber: '4',
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '4',  
+    },
+    {
+        tablenumber: '5',
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '5',  
+    },
+];
+console.log(tables);
+const waitlist = [
+    {
+        name: 'Tyler',
+        phoneNumber: '123',
+        email: 'tyler@tyler.com',
+        id: '5',  
+    }
+]
+console.log(waitlist);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
