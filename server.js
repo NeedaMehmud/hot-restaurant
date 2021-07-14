@@ -4,7 +4,14 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 // this will later be the object to store our tables
-const tables =[];
+const tables = [
+    {},
+    {},
+    {},
+    {},
+    {},
+];
+const waitlist = []
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
