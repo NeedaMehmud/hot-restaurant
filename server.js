@@ -41,7 +41,7 @@ const tables = [
         id: '5',  
     },
 ];
-console.log(tables);
+
 const waitlist = [
     {
         name: 'Tyler',
@@ -50,18 +50,18 @@ const waitlist = [
         id: '5',  
     }
 ]
-console.log(waitlist);
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get ('/', function(req, res){
-    // res.sendFile(path.join(__dirname, "index.html"))
+    res.sendFile(path.join(__dirname, "index.html"))
     console.log('Home Page has been initialized!');
 })
 
 app.get ('/reserve', function(req, res){
-    // res.sendFile(path.join(__dirname, "reserve.html"))
+    res.sendFile(path.join(__dirname, "make-reservation.html"))
     console.log('Make a reservation');
 })
 
@@ -71,13 +71,13 @@ app.get ('/tables', function(req, res){
 })
 
 app.get ('/api/tables', function(req, res) {
-    // res.json(tables);
+    res.json(tables);
     
     console.log('Tables API call');
 })
 
 app.get ('/api/waitlist', function(req, res){
-    // res.json(waitlist);
+    res.json(waitlist);
     console.log('Waitlist API call');
 })
 
